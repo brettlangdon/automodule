@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+var fs = require('fs');
+var automodule = require('automodule');
+
+var modules = automodule({print:true});
+
+if(process.argv.length > 2){
+  var out = process.argv[2];
+  if(fs.existsSync(out)){
+    console.error(out + ' already exists, exiting');
+    process.exit(1);
+  } 
+  fs.writeFileSync(out, modules);
+} else{
+  console.log(modules);
+} 
