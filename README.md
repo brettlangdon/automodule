@@ -1,4 +1,4 @@
-automodule
+Automodule
 ==========
 
 Node.JS module to auto include your sub-modules or to generate static include scripts.
@@ -42,7 +42,7 @@ return module.exports = {one:require("./one"),three:require("./three"),two:requi
 
 You can also use `automodule` as a function within your scripts to include all submodules.
 
-```node
+```javascript
 var automodule = require('automodule');
 var options = {search:__dirname};
 
@@ -51,5 +51,5 @@ return module.exports = automodule(options);
 
 ### Options
 
-* `search` - directory to look in for modules (String|default: `process.cwd())
+* `search` - directory to look in for modules (String|default: `process.cwd()`)
 * `print` - whether or not to include the modules or generate static string (Boolean|default: `false`)
