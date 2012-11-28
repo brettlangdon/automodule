@@ -9,12 +9,11 @@ Otherwise each directory and file (other than `index.js`) will be required and e
 
 ## Installation
 ```bash
-npm install -g automodule
+[sudo] npm install [-g] automodule
 ```
 
 ## Usage
 See `examples` directory.
-
 
 ### Generate Static File
 
@@ -53,6 +52,7 @@ return module.exports = automodule(options);
 
 * `search` - directory to look in for modules (String|default: `process.cwd()`)
 * `print` - whether or not to include the modules or generate static string (Boolean|default: `false`)
+* `recursive` - how far deep to search for files, default is search directory only (Number|default: `1`)
 
 ## Bugs/Issues/Features
 
